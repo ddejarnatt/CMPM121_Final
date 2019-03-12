@@ -13,6 +13,8 @@ public class CharaControl : MonoBehaviour{
     float m_TurnAmount;
     bool m_IsGrounded = false;
     public bool canMove = true;
+    public bool hasCollectable = false;
+    public bool has2ndCollectable = false;
     
     // Start is called before the first frame update
     void Start(){
