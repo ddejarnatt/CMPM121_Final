@@ -7,10 +7,13 @@ public class ButtonForSymbol : MonoBehaviour{
     public SymbolControl symbol1;
     public SymbolControl symbol2;
     public SymbolControl symbol3;
+    public Animator button;
 
     void OnTriggerStay(Collider other){
     	//check if player is in range of button and presses interaction key
     	if (other.gameObject.CompareTag("Player") && Input.GetKeyDown("space")){
+            //play animation
+            button.Play("ButtonPress", 0, 0);
     		//go through all the symbols and flip their color
     		if (symbol1.isRed == true){
     			symbol1.isRed = false;
